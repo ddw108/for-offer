@@ -6,17 +6,17 @@ package array;
  */
 public class GetNumberOfK {
 
-    public int GetNumberOfK(int [] array , int k){
-        int length = array.length;
-        if(length <= 0)
-            return 0;
-        int start = getFirstIndex(array, k, 0, length-1);
-        int end = getLastIndex(array, k, 0, length-1);
-        return end - start + 1;
-    }
+        public int GetNumberOfK(int [] array , int k){
+            int length = array.length;
+            if(length <= 0)
+                return 0;
+            int start = getFirstIndex(array, k, 0, length-1);
+            int end = getLastIndex(array, k, 0, length-1);
+            return end - start + 1;
+        }
 
-    //用二分查找，找到这个区间的左右边缘
-    private int getFirstIndex(int [] array , int k, int start, int end) {
+        //用二分查找，找到这个区间的左右边缘
+        private int getFirstIndex(int [] array , int k, int start, int end) {
         int mid = (start + end) / 2;
         while (start <= end) {
             //左区间

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 
-public class Permutation {
+public class PermutationRecursion {
 
     private void swap(char[] str, int i, int j){
         if(i != j){
@@ -32,6 +32,7 @@ public class Permutation {
         ArrayList<String> result = new ArrayList<>();
         if(str == null || str.length() == 0)
             return result;
+        //set存储，避免重复数据
         HashSet<String> set = new HashSet<>();
         PermutationHelper(set, str.toCharArray(), 0);
         result.addAll(set);
@@ -40,7 +41,7 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        Permutation permutation = new Permutation();
-        permutation.Permutation("ABC");
+        PermutationRecursion permutationRecursion = new PermutationRecursion();
+        permutationRecursion.Permutation("ABC");
     }
 }
