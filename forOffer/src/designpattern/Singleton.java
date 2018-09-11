@@ -1,3 +1,5 @@
+package designpattern;
+
 public class Singleton {
 
     private static volatile Singleton singleton = null;
