@@ -17,6 +17,7 @@ import java.util.Map;
  */
 public class LengthOfLongestSubstring {
 
+    //map
     //滑动窗口
     //我们可以定义字符到索引的映射，而不是使用集合来判断一个字符是否存在。
     // 当我们找到重复的字符时，我们可以立即跳过该窗口。
